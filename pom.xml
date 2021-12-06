@@ -83,14 +83,14 @@
         <powermock.version>2.0.9</powermock.version>
 
         <checkstyle.version>3.1.2</checkstyle.version>
-        <checkstyle.skip>false</checkstyle.skip>
+        <checkstyle.skip>true</checkstyle.skip>
         <apache.rat.version>0.13</apache.rat.version>
         <cobertura.maven.version>2.7</cobertura.maven.version>
         <maven.resource.version>3.2.0</maven.resource.version>
         <maven.surefire.version>3.0.0-M1</maven.surefire.version>
         <maven.jacoco.version>0.8.6</maven.jacoco.version>
         <byte-buddy.version>1.12.2</byte-buddy.version>
-        <capa.foundation.version>1.0.4.RELEASE</capa.foundation.version>
+<!--        <capa.foundation.version>1.0.4.RELEASE</capa.foundation.version>-->
     </properties>
 
     <dependencyManagement>
@@ -175,11 +175,11 @@
                 <scope>test</scope>
             </dependency>
 
-            <dependency>
-                <groupId>group.rxcloud</groupId>
-                <artifactId>capa-foundation</artifactId>
-                <version>${capa.foundation.version}</version>
-            </dependency>
+<!--            <dependency>-->
+<!--                <groupId>group.rxcloud</groupId>-->
+<!--                <artifactId>capa-foundation</artifactId>-->
+<!--                <version>${capa.foundation.version}</version>-->
+<!--            </dependency>-->
         </dependencies>
     </dependencyManagement>
 

@@ -133,7 +133,8 @@ public class AwsCapaConfigStore extends CapaConfigStoreSpi {
             return Mono.error(new CapaException(CapaErrorContext.PARAMETER_ERROR, "keys is null or empty"));
         }
 
-        String applicationName = String.format(APPCONFIG_NAME_FORMAT,appId, Foundation.server().getEnv().getName());
+        String applicationName = appId + "_FAT";
+//        String applicationName = String.format(APPCONFIG_NAME_FORMAT,appId, Foundation.server().getEnv().getName());
         String configurationName = keys.get(0);
 
         GetConfigurationRequest request = GetConfigurationRequest.builder()
@@ -153,7 +154,8 @@ public class AwsCapaConfigStore extends CapaConfigStoreSpi {
     @Override
     protected <T> Flux<SubscribeResp<T>> doSubscribe(String appId, String group, String label, List<String> keys, Map<String, String> metadata, TypeRef<T> type) {
 
-        String applicationName = String.format(APPCONFIG_NAME_FORMAT,appId, Foundation.server().getEnv().getName());
+        String applicationName = appId + "_FAT";
+//        String applicationName = String.format(APPCONFIG_NAME_FORMAT,appId, Foundation.server().getEnv().getName());
         String configurationName = keys.get(0);
 
         initSubscribe(applicationName, configurationName, group, label, metadata, type);
